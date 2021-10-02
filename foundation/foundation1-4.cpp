@@ -2,10 +2,13 @@
 #include <algorithm>
 #include "cstring"
 
+#define INT_MAX 2147483647
+#define INT_MIN (-INT_MAX-1)
+
 using namespace std;
 
 //1
-int Tmax(int a, int b, int c = 0, int d = 0) {
+int Tmax(int a, int b, int c = INT_MIN, int d = INT_MIN) {
     if (b > a)
         a = b;
     if (c > a)
@@ -23,7 +26,7 @@ int Smin(int &a, int &b) {
         return a;
 }
 
-int Tmin(int a, int b, int c = 0, int d = 0) {
+int Tmin(int a, int b, int c = INT_MAX, int d = INT_MAX) {
     int x;
     x = Smin(a, b);
     x = Smin(x, c);
@@ -83,17 +86,17 @@ int main() {
 //    int a, b, c, d;
 //    cout << "输入待比较的数据：";
 //    cin >> a >> b >> c >> d;
-//    cout << "a,b和0中的最大值是：" << Tmax(a, b) << endl;
-//    cout << "a,b,c和0中的最大值是：" << Tmax(a, b, c) << endl;
+//    cout << "a,b中的最大值是：" << Tmax(a, b) << endl;
+//    cout << "a,b和c中的最大值是：" << Tmax(a, b, c) << endl;
 //    cout << "a,b,c和d中的最大值是：" << Tmax(a, b, c, d) << endl;
 
 //    2
-//    int a, b, c, d;
-//    cout << "输入待比较的数据：";
-//    cin >> a >> b >> c >> d;
-//    cout << "a,b中的最小值是：" << Smin(a, b) << endl;
-//    cout << "a,b,c和0中的最小值是：" << Tmin(a, b, c) << endl;
-//    cout << "a,b,c和d中的最小值是：" << Tmin(a, b, c, d) << endl;
+    int a, b, c, d;
+    cout << "输入待比较的数据：";
+    cin >> a >> b >> c >> d;
+    cout << "a,b中的最小值是：" << Smin(a, b) << endl;
+    cout << "a,b,c中的最小值是：" << Tmin(a, b, c) << endl;
+    cout << "a,b,c和d中的最小值是：" << Tmin(a, b, c, d) << endl;
 
 //    3
 //    sortStringArray();
@@ -109,7 +112,7 @@ int main() {
 //    cout << "排序结果：";
 //    for (i = 0; i < length; i++) {
 //        cout << array[i] << ' ';
-    }
+//    }
 
     return 0;
 }
