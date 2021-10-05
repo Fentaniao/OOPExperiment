@@ -27,8 +27,11 @@ simplecat::~simplecat() {
 }
 
 int main() {
+    //创建F对象
     simplecat F(5, 8);
+    //输出age
     cout << "F age is: " << F.GetAge() << endl;
+    //输出weight
     cout << "F weight is:" << F.GetWeight() << endl;
 
     return 0;
