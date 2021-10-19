@@ -1,54 +1,62 @@
 #ifndef POWERTRACE_H
 #define POWERTRACE_H
 
-/*
- * A C++ .h file designs to trace variable
- * Copy this .h file to your directory, and include "#include "PowerTrace.h"" in your target .hpp file.
+/**
+ * <h1>PowerTrace</h1>
+ * <p>A C++ head file designs to trace variable
+ * <hr />
+ * <h2>Usage</h2>
+ * <p>Copy this .h file to your project directory, and include <b><code>#include "PowerTrace.h"</code></b> in your target .cpp file.
+ * <h2>Copyright</h2>
+ * @author      Fentaniao
+ * @version       2021/10/19
  */
 
-// TODO 可以使用修饰符进行控制，如"N2D描述S"表示输出traceNum为2，description为描述，S表示储存为日志
+// TODO 可以考虑使用修饰符进行控制，如"N2D描述S"表示输出traceNum为2，description为描述，S表示储存为日志
 
 #include <iostream>
 
 #define varName(x) #x
-#define printExp(exp) std::cout<<#exp<<"为:\t\t"<<(exp)<<std::endl
+#define printExp(exp) cout<<#exp<<"为:\t\t"<<(exp)<<endl
+
+using namespace std;
 
 //trace simple variable
 template<typename T>
-void trace(T var, int traceNum = -1, const std::string &description = "") {
-    std::cout << "*[VarName=" << varName(var) << "] ";
+void trace(T var, int traceNum = -1, const string &description = "") {
+    cout << "TRACE[VarName=" << varName(var) << "] ";
 
     if (traceNum != -1)
-        std::cout << "[TraceNum=" << traceNum << "] ";
+        cout << "[TraceNum=" << traceNum << "] ";
 
-    std::cout << "[Type=" << typeid(var).name() << "] "
-              << "[Value=" << var << "]";
+    cout << "[Type=" << typeid(var).name() << "] "
+         << "[Value=" << var << "]";
 
     if (!description.empty())
-        std::cout << "[Desc: " << description << "] ";
+        cout << "[Desc: " << description << "] ";
 
-    std::cout << std::endl;
+    cout << endl;
 }
 
 
 //trace Array variable
 template<typename T>
-void traceArr(T var, int traceNum = -1, const std::string &description = "") {
-    std::cout << "*[ArrName=" << varName(var) << "] ";
+void traceArr(T var, int traceNum = -1, const string &description = "") {
+    cout << "TRACE[ArrName=" << varName(var) << "] ";
 
     if (traceNum != -1)
-        std::cout << "[TraceNum=" << traceNum << "] ";
+        cout << "[TraceNum=" << traceNum << "] ";
 
-    std::cout << "[Type=" << typeid(var).name() << "] "
-              << "[Set={";
+    cout << "[Type=" << typeid(var).name() << "] "
+         << "[Set={";
     for (int i = 0; i < sizeof(var) / sizeof(var[0]); i++)
-        std::cout << var[i] << ", ";
-    std::cout << "}]";
+        cout << var[i] << ", ";
+    cout << "}]";
 
     if (!description.empty())
-        std::cout << "[Desc: " << description << "] ";
+        cout << "[Desc: " << description << "] ";
 
-    std::cout << std::endl;
+    cout << endl;
 }
 
 #endif //POWERTRACE_H
