@@ -90,16 +90,16 @@ public:
 };
 
 int main() {
-//A
+    //A
     Hard h("cpu");
     Soft s("Windows XP");
-//A
-//B
+    //A
+    //B
     Computer1 c1("leno", h, s);
     Computer1 c2("leno", "cpu", "windows 10");
     c1.Show();
     c2.Show();
-//B
+    //B
     //C
     Computer2 c3("leno", h, s);
     Computer2 c4("leno", "cpu", "windows 10");

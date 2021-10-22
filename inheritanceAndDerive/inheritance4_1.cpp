@@ -35,5 +35,5 @@ public:
 int main() {
     c object(5);
 
-    return 0:
+    return 0;
 }

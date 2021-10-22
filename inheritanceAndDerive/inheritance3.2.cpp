@@ -19,8 +19,7 @@ private:
 };
 
 class C : protected B {
-public
-
+public:
     void f4();
 
 protected:
@@ -44,5 +43,8 @@ int main() {
     B b1;
     C c1;
     D d1;
+
+
+
     return 0;
 }

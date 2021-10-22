@@ -25,10 +25,11 @@ public:
 class toplevel : public level1, virtual public level2 {  //C
 public:
     toplevel() {
-        cout << "this is toplevel class! \";}
-    };
+        cout << "this is toplevel class! \n";
+    }
+};
 
-    int main() {
-        toplevel topobj;
-        return 0;
-    };
+int main() {
+    toplevel topobj;
+    return 0;
+};
