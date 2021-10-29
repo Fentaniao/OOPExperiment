@@ -64,14 +64,14 @@ int main() {
     d1.inc1();
     d1.display();
 
-    derive2 d2(5);  //C
-    d2.assign(-6, -6); //D
-    d2.display();
-    d2.inc1();
-    d2.inc2();
-    d2.display();
-    d2.base::inc1();
-    d2.display();
+    //derive2 d2(5);  //C
+    //d2.assign(-6, -6); //D
+    //d2.display();
+    //d2.inc1();
+    //d2.inc2();
+    //d2.display();
+    //d2.base::inc1();
+    //d2.display();
 
     return 0;
 }
