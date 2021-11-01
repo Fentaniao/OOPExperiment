@@ -29,8 +29,8 @@ foreach (file ${files})
     string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${path})
     #添加
     add_executable(${exe} ${path})
-    target_link_libraries(${exe} gtest gtest_main)
-    target_link_libraries(${exe} gmock gmock_main)
+#    target_link_libraries(${exe} gtest gtest_main)
+#    target_link_libraries(${exe} gmock gmock_main)
     #发送完成消息
     message(\ \ \ \ --\ src/${exe}.cpp\ will\ be\ compiled\ to\ bin/${exe})
 endforeach ()
