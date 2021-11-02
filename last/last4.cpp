@@ -28,6 +28,13 @@ public:
     void printname() { cout << " this is ：" << name << endl; }
 };
 
+class Rabbit : public Pet {
+public:
+    Rabbit(string s) : Pet(s) {};
+
+    void printname() { cout << " this is ：" << name << endl; }
+};
+
 class Home {
 private:
     int nPets;
@@ -50,9 +57,15 @@ int main() {
     myhome.Add(new Dog("dog1"));
     myhome.Add(new Dog("dog2"));
     myhome.Add(new Dog("dog3"));
+
     myhome.Add(new Cat("cat1"));
     myhome.Add(new Cat("cat2"));
     myhome.Add(new Cat("cat3"));
+
+    myhome.Add(new Rabbit("rabbit1"));
+    myhome.Add(new Rabbit("rabbit2"));
+    myhome.Add(new Rabbit("rabbit3"));
+
     myhome.printAll();
 
     return 0;

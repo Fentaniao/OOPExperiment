@@ -1,17 +1,19 @@
 //虚函数的使用3
-#include < iostream >
+#include <iostream>
 
 using namespace std;
 
 class a {
 public:
-    virtual void f() //C
+    //virtual void f() //C
+    void f() //C
     { cout << "class a\n"; }
 };
 
 class a1 : public a {
 public:
-    void f()//D
+    //void f()//D
+    virtual void f()//D
     { cout << "class a1\n"; }
 };
 

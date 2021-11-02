@@ -20,41 +20,6 @@ void test(base &b) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 int main() {
     base bc;
     subclass sc;

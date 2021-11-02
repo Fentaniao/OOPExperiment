@@ -38,7 +38,8 @@ int main() {
     Li *p;       //基类指针，李家代表
     Li_brother b;
     Li_sister s;
-    p = &s;
+    //p = &b; //基类指针，哥哥
+    p = &s; //基类指针，妹妹
     Speak(p);
     return 0;
 }
